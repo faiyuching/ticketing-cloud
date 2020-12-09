@@ -9,7 +9,7 @@ metadata:
 spec:
   tls:
     - hosts:
-      - www.zhuominginfo.org
+        - www.zhuominginfo.org
       secretName: echo-tls
   rules:
     - host: www.zhuominginfo.org
