@@ -15,15 +15,21 @@ import '@ionic/react/css/display.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import buildClient from '../api/build-client';
 import Header from '../components/header';
+import { IonApp, IonPage, IonContent } from '../lib/ionic';
 
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (
-    <div>
-      <Header currentUser={currentUser} />
-      <div className="container">
-        <Component currentUser={currentUser} {...pageProps} />
-      </div>
-    </div>
+    <IonApp>
+      <IonPage>
+        <Header currentUser={currentUser} />
+        <IonContent class="ion-padding">
+          <div className="container">
+            <Component currentUser={currentUser} {...pageProps} />
+          </div>
+        </IonContent>
+      </IonPage>
+    </IonApp>
+
   );
 };
 
