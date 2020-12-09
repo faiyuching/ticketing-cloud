@@ -23,9 +23,7 @@ const AppComponent = ({ Component, pageProps, currentUser }) => {
       <IonPage>
         <Header currentUser={currentUser} />
         <IonContent class="ion-padding">
-          <div className="container">
-            <Component currentUser={currentUser} {...pageProps} />
-          </div>
+          <Component currentUser={currentUser} {...pageProps} />
         </IonContent>
       </IonPage>
     </IonApp>
