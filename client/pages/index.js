@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { IonButton } from '../lib/ionic';
 
 const LandingPage = ({ currentUser, tickets }) => {
   const ticketList = tickets.map((ticket) => {
@@ -28,6 +29,7 @@ const LandingPage = ({ currentUser, tickets }) => {
         </thead>
         <tbody>{ticketList}</tbody>
       </table>
+      <IonButton>Default</IonButton>
     </div>
   );
 };
